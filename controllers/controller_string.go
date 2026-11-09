@@ -32,8 +32,9 @@ const _Controller_name = "corejobserviceportalregistryregistryctlchartmuseumexpo
 var _Controller_index = [...]uint8{0, 4, 14, 20, 28, 39, 50, 58, 70, 82, 87, 93, 106, 127, 146, 171, 188, 197}
 
 func (i Controller) String() string {
-	if i < 0 || i >= Controller(len(_Controller_index)-1) {
+	idx := int(i) - 0
+	if i < 0 || idx >= len(_Controller_index)-1 {
 		return "Controller(" + strconv.FormatInt(int64(i), 10) + ")"
 	}
-	return _Controller_name[_Controller_index[i]:_Controller_index[i+1]]
+	return _Controller_name[_Controller_index[idx]:_Controller_index[idx+1]]
 }

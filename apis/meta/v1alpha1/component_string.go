@@ -26,8 +26,9 @@ const _Component_name = "corejobserviceportalregistryregistryctlchartmuseumexpor
 var _Component_index = [...]uint8{0, 4, 14, 20, 28, 39, 50, 58, 70, 82, 87, 101}
 
 func (i Component) String() string {
-	if i < 0 || i >= Component(len(_Component_index)-1) {
+	idx := int(i) - 0
+	if i < 0 || idx >= len(_Component_index)-1 {
 		return "Component(" + strconv.FormatInt(int64(i), 10) + ")"
 	}
-	return _Component_name[_Component_index[i]:_Component_index[i+1]]
+	return _Component_name[_Component_index[idx]:_Component_index[idx+1]]
 }
